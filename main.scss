@@ -1,0 +1,185 @@
+@import 'variables';
+@import 'reset';
+
+.nav {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 4rem;
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        justify-content: space-between;
+    }
+
+    .head_list {
+        display: flex;
+        gap: 2rem;
+
+        a:hover {
+            color: $hover-color;
+        }
+    }
+
+    .wrap {
+        border: 1px solid $first-color;
+        padding: 0.7rem 1rem;
+        border-radius: 0.5rem;
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+
+        .wrap:hover {
+            background-color: $first-color;
+            color: $secondary-color;
+        }
+    }
+}
+
+#main {
+    height: 30rem;
+    background-color: $first-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hero {
+        color: $secondary-color;
+        text-align: center;
+
+        .title {
+            font-size: 6rem;
+            font-family: $font-family;
+            margin-bottom: 2rem;
+        }
+
+        .text {
+            font-size: 2rem;
+            font-family: $font-family;
+        }
+    }
+}
+
+#card-section {
+    padding: 6rem 0;
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 23rem;
+        height: 37.5rem;
+        border: 1px solid $first-color;
+        border-radius: 0.5rem;
+        padding: 1rem 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .img {
+            width: 100%;
+            height: 18rem;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .card_text {
+            text-align: center;
+
+            .card_title {
+                font-size: 2rem;
+                font-family: $font-family;
+                margin: 1rem 0;
+            }
+        }
+
+        .card_btn {
+            padding: 1rem 2rem;
+            border: 1px solid $first-color;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            color: $first-color;
+            background-color: transparent;
+            width: 11.7rem;
+
+            &:hover {
+                background-color: $first-color;
+                color: $secondary-color;
+            }
+        }
+
+        .sale {
+            padding: 0.1rem 0.5rem;
+            background-color: $first-color;
+            color: $secondary-color;
+            border-radius: 0.5rem;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+        }
+    }
+}
+
+.footer {
+    height: 10rem;
+    background-color: $first-color;
+    color: $secondary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.old-price {
+    text-decoration: line-through;
+}
+
+.burger {
+    display: none;
+    font-size: 2rem;
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav {
+        justify-content: space-between;
+        padding: 0 6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 20rem;
+        height: 35rem;
+    }
+
+    .card_title {
+        font-size: 1.8rem;
+    }
+
+    .title {
+        font-size: 5rem;
+    }
+
+    .text {
+        font-size: 1.8rem;
+    }
+}
